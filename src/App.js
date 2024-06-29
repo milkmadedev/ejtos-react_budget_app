@@ -9,9 +9,8 @@ import Budget from './components/Budget';
 // Add code to import the other components here under
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
-import ExpenseItem from './components/ExpenseItem';
 import ExpenseList from './components/ExpenseList';
-
+import CHG from './components/CHG';
 
 import { AppProvider } from './context/AppContext';
 import AllocationForm from './components/AllocationForm';
@@ -24,9 +23,15 @@ const App = () => {
                         {
                     // Budget component
                         <div className='col-sm'>
-                            <Budget />
+                            <Budget/>
                         </div>
-                        }        
+                        } 
+                        {
+                    // Currency component
+                        <div className='col-sm'>
+                            <CHG/>
+                        </div>
+                        }       
 
                         {
                                              //Remaining component
@@ -37,23 +42,19 @@ const App = () => {
 
                         {
                                              //ExpenseTotal component
-                        <div className='col-sm'>
+                        <div className='col-sm' >
+
                             <ExpenseTotal />
                         </div>
                         }        
                        
                         {
+
                             <div className='col-sm'>
                                 <ExpenseList />
                             </div>
                                 
-                        }         
-
-                        {
-                            <div className='col-sm'>
-                            <ExpenseItem />
-                            </div>
-                        }        
+                        }              
 
                         {
                             <div className='col-sm'>
